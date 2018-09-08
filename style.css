@@ -1,0 +1,95 @@
+/*
+Theme Name: Customizer Demo
+Theme URI:
+Author: LWHH
+Author URI: https://learnwith.hasinhayder.com
+Description: Customizer Demo Theme
+Version: 1.0
+License: GPL
+License URI: GPL
+Text Domain: customizer
+Tags:
+*/
+body {
+    color: #777;
+}
+
+.banner {
+    text-align: center;
+    background: url(assets/images/rp.svg);
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 100px;
+}
+
+.banner h1 {
+    font-size: 120px;
+    line-height: 120px;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.banner h2 {
+    font-size: 36px;
+    padding-bottom: 50px;
+    color: #eee;
+    font-weight: normal;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+
+}
+
+.sub-section {
+    margin-top: 50px;
+}
+
+.section .heading {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    color: #222;
+}
+
+.section .subheading {
+    color: #777;
+    font-size: 20px;
+    padding: 0px 40px;
+    text-align: center;
+    line-height: 1.7em;
+}
+
+.service {
+    text-align: center;
+    padding: 30px 0px;
+    line-height: 1.8em;
+}
+
+.service i {
+    font-size: 38px;
+    color: #dd2d6a;
+}
+
+.service h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #777;
+}
+
+.section.footer {
+    margin-top: 60px;
+    padding: 50px 0px;
+    text-align: center;
+    background-color: #222;
+    color: #eee;
+}
+
+.footer a, .footer a:hover {
+    color: #eee;
+}
