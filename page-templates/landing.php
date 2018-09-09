@@ -35,9 +35,11 @@
                     </p>
 				<?php
 				endif;
+
+				$cust_column = get_theme_mod('cust_services_number_of_items',4);
 				?>
                 <div class="row sub-section">
-                    <div class="col-md-4">
+                    <div class="col-md-<?php echo esc_attr($cust_column); ?>">
                         <div class="service">
                             <i class="far fa-building"></i>
                             <h2>Service Name</h2>
@@ -45,7 +47,7 @@
                                 harum ipsum necessitatibus nihil, pariatur praesentium quia voluptate.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-<?php echo esc_attr($cust_column); ?>">
                         <div class="service">
                             <i class="fas fa-chart-bar"></i>
                             <h2>Service Name</h2>
@@ -53,7 +55,7 @@
                                 harum ipsum necessitatibus nihil, pariatur praesentium quia voluptate.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-<?php echo esc_attr($cust_column); ?>">
                         <div class="service">
                             <i class="fas fa-city"></i>
                             <h2>Service Name</h2>
@@ -61,7 +63,7 @@
                                 harum ipsum necessitatibus nihil, pariatur praesentium quia voluptate.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-<?php echo esc_attr($cust_column); ?>">
                         <div class="service">
                             <i class="fas fa-haykal"></i>
                             <h2>Service Name</h2>
@@ -69,7 +71,7 @@
                                 harum ipsum necessitatibus nihil, pariatur praesentium quia voluptate.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-<?php echo esc_attr($cust_column); ?>">
                         <div class="service">
                             <i class="fas fa-broadcast-tower"></i>
                             <h2>Service Name</h2>
@@ -77,7 +79,7 @@
                                 harum ipsum necessitatibus nihil, pariatur praesentium quia voluptate.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-<?php echo esc_attr($cust_column); ?>">
                         <div class="service">
                             <i class="fas fa-bicycle"></i>
                             <h2>Service Name</h2>

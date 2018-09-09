@@ -23,5 +23,15 @@ function cust_assets(){
 	wp_enqueue_style('fontawesome-css','//use.fontawesome.com/releases/v5.3.1/css/all.css');
 
 	wp_enqueue_style('cust-main',get_stylesheet_uri(),null,time());
+
+	$services_icon_color = get_theme_mod('cust_services_icon_color','#dd2d6a');
+	$services_style =<<<EOD
+.service i {
+    color: {$services_icon_color};
+}
+EOD;
+
+	wp_add_inline_style('cust-main',$services_style);
+
 }
 add_action('wp_enqueue_scripts','cust_assets');
