@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="mission section">
-                <h1 class="heading">
+                <h1 class="heading" id="service-heading">
 					<?php
 					echo esc_html( get_theme_mod( 'cust_services_heading', __( 'Our Mission Statement', 'customizer' ) ) );
 					//echo esc_html( get_option( 'cust_services_heading', __( 'Our Mission Statement', 'customizer' ) ) );
