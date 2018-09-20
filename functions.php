@@ -1,4 +1,7 @@
 <?php
+define( 'version', wp_get_theme()->get( "Author" ) );
+echo version;
+die();
 require_once( get_theme_file_path( '/inc/customizer.php' ) );
 function cust_theme_setup() {
 	load_theme_textdomain( 'customizer', get_template_directory_uri() . "/languages" );
