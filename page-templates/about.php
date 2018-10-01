@@ -20,7 +20,8 @@
             <div class="mission section">
                 <h1 class="heading" id="service-heading">
                     <?php
-                    echo get_theme_mod('cust_about_heading',__('About Page Heading','customizer'));
+                    //echo get_theme_mod('cust_about_heading',__('About Page Heading','customizer'));
+                    echo esc_html(cs_get_customize_option('about_heading'));
                     ?>
                 </h1>
                 <p>
