@@ -2,10 +2,10 @@
 
 function cust_customizer_settings( $wp_customizer ) {
 	$wp_customizer->add_section( 'cust_services', array(
-		'title'    => __( 'Services', 'customizer' ),
-		'priority' => '30',
-		'active_callback'=>function(){
-			return is_page_template('page-templates/landing.php');
+		'title'           => __( 'Services', 'customizer' ),
+		'priority'        => '30',
+		'active_callback' => function () {
+			return is_page_template( 'page-templates/landing.php' );
 		}
 	) );
 
@@ -92,22 +92,63 @@ function cust_customizer_settings( $wp_customizer ) {
 			}
 			return false;*/
 
-			return is_page_template('page-templates/about.php');
+			return is_page_template( 'page-templates/about.php' );
 		}
+	) );
+
+	$wp_customizer->add_setting( 'cust_display_about', array(
+		'default'   => 1,
+		'transport' => 'postMessage',
+	) );
+
+	$wp_customizer->add_control( 'cust_display_about', array(
+		'label'    => __( 'Display About Section', 'customizer' ),
+		'section'  => 'cust_about',
+		'type'     => 'checkbox',
+
 	) );
 
 	$wp_customizer->add_setting( 'cust_about_heading', array(
 		'default'   => "About Page Heading",
-		'transport' => 'refresh', //postMessage
-//		'type'=>'option' //theme_mod or option
+		'transport' => 'postMessage',
 	) );
 
-	$wp_customizer->add_control( 'cust_about_heading_ctrl', array(
+	$wp_customizer->add_control( 'cust_about_heading', array(
 		'label'    => __( 'About Page Heading', 'customizer' ),
 		'section'  => 'cust_about',
-		'settings' => 'cust_about_heading',
-		'type'     => 'text'
+		'type'     => 'text',
+
 	) );
+	$wp_customizer->add_setting( 'cust_about_description', array(
+		'default'   => "About Page Heading",
+		'transport' => 'postMessage',
+	) );
+
+	$wp_customizer->add_control( 'cust_about_description', array(
+		'label'   => __( 'About Page Heading', 'customizer' ),
+		'section' => 'cust_about',
+		'type'    => 'textarea',
+	) );
+
+	$wp_customizer->selective_refresh->add_partial('about_section_heading',array(
+		'selector'=>'#about-heading',
+		'settings'=>'cust_about_heading',
+		'render_callback'=>function(){
+			return get_theme_mod('cust_about_heading');
+		}
+	));
+
+	$wp_customizer->selective_refresh->add_partial('about_section_description',array(
+		'selector'=>'#about-description',
+		'settings'=>'cust_about_description',
+		'render_callback'=>function(){
+			return apply_filters('the_content',get_theme_mod('cust_about_description'));
+		}
+	));
+
+
+
+
 
 
 	/**
