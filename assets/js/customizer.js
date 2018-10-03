@@ -10,7 +10,11 @@
             $(".service i").css("color", newvalue);
         });
     });
-
+    wp.customize('_cs_customize_options[about_heading]',function(value){
+        value.bind(function(newvalue){
+            $("#service-heading").html(newvalue);
+        });
+    });
 })(jQuery);
 
 
