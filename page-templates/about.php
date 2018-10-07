@@ -28,7 +28,31 @@
 	                <?php
 	                echo apply_filters('the_content',get_theme_mod('cust_about_description'));
 	                ?>
+
+                    <?php
+                    $attachment_id = attachment_url_to_postid(get_theme_mod("test_image"));
+                    echo wp_get_attachment_image($attachment_id);
+                    ?>
+                    <br/>
+	                <?php
+	                $attachment_id = get_theme_mod("test_image2");
+	                echo $attachment_id;
+	                ?>
+
+                    <br/>
+	                <?php
+	                //$attachment_id = attachment_url_to_postid(get_theme_mod("test_file1"));
+	                $attachment_id = get_theme_mod("test_file1");
+	                echo $attachment_id;
+	                ?><br/>
+	                <?php
+	                //$attachment_id = attachment_url_to_postid(get_theme_mod("test_file1"));
+	                $attachment_id = get_theme_mod("test_image3");
+
+	                ?>
                 </div>
+
+
             </div>
         </div>
     </div>

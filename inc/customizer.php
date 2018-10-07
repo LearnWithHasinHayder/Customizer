@@ -146,6 +146,82 @@ function cust_customizer_settings( $wp_customizer ) {
 		}
 	));
 
+	/**
+	 * Special Controls
+	 */
+	$wp_customizer->add_section( 'image_and_upload', array(
+		'title'           => __( 'Image and Upload', 'customizer' ),
+		'priority'        => '40',
+	) );
+	$wp_customizer->add_setting( 'test_image', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customizer,
+			'test_logo',
+			array(
+				'label'      => __( 'Upload an Image', 'theme_name' ),
+				'section'    => 'image_and_upload',
+				'settings'   => 'test_image',
+			)
+		)
+	);
+
+	$wp_customizer->add_setting( 'test_image2', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Media_Control(
+			$wp_customizer,
+			'test_image2',
+			array(
+				'label'      => __( 'Upload an Image', 'theme_name' ),
+				'section'    => 'image_and_upload',
+			)
+		)
+	);
+
+	$wp_customizer->add_setting( 'test_file1', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Upload_Control(
+			$wp_customizer,
+			'test_file1',
+			array(
+				'label'      => __( 'Upload a File', 'theme_name' ),
+				'section'    => 'image_and_upload',
+			)
+		)
+	);
+
+	$wp_customizer->add_setting( 'test_image3', array(
+		'default'   => "Upload Image",
+		'transport' => 'refresh',
+	) );
+
+	$wp_customizer->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customizer,
+			'test_image3',
+			array(
+				'label'      => __( 'Upload a File', 'theme_name' ),
+				'section'    => 'image_and_upload',
+				'height'=>600,
+				'width'=>800
+			)
+		)
+	);
+
+
+
 
 
 
