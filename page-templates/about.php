@@ -50,6 +50,12 @@
 	                $attachment_id = get_theme_mod("test_image3");
 
 	                ?>
+
+                    <br/>
+	                <?php
+	                echo esc_html(get_theme_mod('my_setting'));
+
+	                ?>
                 </div>
 
 
